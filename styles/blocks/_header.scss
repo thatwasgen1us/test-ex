@@ -1,0 +1,94 @@
+@use '../helpers/' as *;
+
+.header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    margin-top: rem(24);
+    margin-inline: rem(13);
+    
+    &__body-inner {
+        display: flex;
+        padding: rem(22) rem(33) rem(14) rem(34);
+        column-gap: rem(49);
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-light);
+        border-radius: 75px;
+        backdrop-filter: blur(15px);
+        animation-name: scrolling-header;
+        animation-fill-mode: both;
+        animation-timeline: scroll();
+        animation-range: rem(100) rem(200);
+        min-width: rem(300);
+
+        @include tablet {
+            column-gap: rem(30);
+        }
+
+        @include mobile {
+            padding: rem(11) rem(14) rem(7) rem(17);
+            column-gap: rem(21);
+        }
+        
+        @keyframes scrolling-header {
+            to {
+                box-shadow: 0 0 1rem 0 var(--color-dark-blue);
+            }
+        }
+    }
+
+    &__menu {
+        align-self: flex-start;
+        flex-grow: 1;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: rem(-36);
+            left: rem(-20);
+            width: 110vw;
+            height: 110vh;
+            background-color: var(--color-light);
+            transition-duration: var(--transition-duration);
+            font-size: rem(20);
+            line-height: 100%;
+            padding-block: rem(80);
+    
+            &:not(.is-active) {
+                @include hide;
+    
+                translate: 100%
+            }
+        }
+    }
+
+    &__menu-list {
+        display: flex;
+        column-gap: rem(41);
+
+        @include tablet {
+            column-gap: rem(30);
+        }
+
+        @include mobile {
+            column-gap: 0;
+            flex-direction: column;
+            row-gap: 1rem;
+        }    
+    }
+}
+
+.logo {
+    align-self: flex-start;
+
+    @include mobile {
+        align-self: center;
+    }
+
+    &__image {
+        min-width: rem(64)
+    }
+}
