@@ -6,6 +6,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include mobile{
+        margin-top: rem(30);
+    }
+
     &__title {
         max-width: rem(600);
         text-align: center;
@@ -43,6 +48,25 @@
         padding: rem(50) rem(35);
         row-gap: rem(10);
         text-align: center;
+        
+        &:last-child {
+            @media (max-width: 1185px) {
+                flex: 1 1 auto;
+                max-width: rem(870);
+            }
+
+            @media (max-width: 935px) {
+                max-width: rem(565);
+            }
+
+            @include mobile {
+                max-width: rem(550);
+            }
+
+            @media (max-width: 621px) {
+                max-width: rem(270);
+            }
+        }
 
         @include mobile-s {
             width: rem(145);
@@ -50,7 +74,7 @@
             padding-inline: rem(7);
 
             &:last-child {
-                flex: 1 1 auto;
+                
                 flex-direction: row;
                 max-width: rem(300);
                 column-gap: rem(17);

@@ -1,0 +1,84 @@
+@use '../helpers/' as *;
+
+.help {
+    margin-top: rem(60);
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(32);
+
+        & > :nth-child(even) {
+            flex-direction: row-reverse;
+
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        column-gap: rem(32);
+        align-items: stretch
+        flex-1;
+        min-height: rem(313);
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(12);
+        }
+        
+    }
+
+    &__item--image {
+        max-width: rem(400);
+        width: 100%;
+        border-radius: rem(40);
+        object-fit: cover;
+        flex: 1;
+        
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+}
+
+
+.ticket {
+    padding: rem(50) rem(50) rem(50) rem(100);
+    background-color: var(--color-cards);
+    border-radius: rem(40);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(18);
+
+    @include tablet {
+        padding-left: rem(20);
+    }
+
+    @include mobile {
+        padding-block: rem(30);
+        row-gap: rem(15);
+        padding-right: rem(35);
+    }
+    &__title {
+        font-size: rem(32);
+        line-height: rem(30);
+
+        @include mobile {
+            font-size: rem(20);
+            line-height: rem(19);
+        }
+    }
+
+    &__text {
+        line-height: rem(25);
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            font-size: rem(12);
+            line-height: rem(17);
+        }
+    }
+}

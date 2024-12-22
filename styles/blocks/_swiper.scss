@@ -37,6 +37,10 @@
         text-align: center;
         background-position: -262rem -110rem;
     }
+
+    @include mobile-s {
+        background-position: -275rem -113rem;
+    }
 }
 
 .learn__item {
@@ -98,6 +102,7 @@
             
             @include mobile {
                 padding-top: rem(16);
+                    align-self: center;
             }
         }
 

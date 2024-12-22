@@ -1,0 +1,24 @@
+@use '../helpers/' as *;
+.pictures {
+    margin-top: rem(60);
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    gap: rem(18);
+    justify-content: center;
+    align-items: center;
+
+    @include mobile  {
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        max-width: rem(571);
+        gap: rem(10);
+    }
+
+    &__block {
+        border-radius: rem(30);
+    }
+}
+
+.big-image {
+    grid-column: span 2;
+    grid-row: span 2;
+}
