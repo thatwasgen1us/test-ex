@@ -1,4 +1,5 @@
 @use '../helpers/' as *;
+
 .pictures {
     margin-top: rem(60);
     display: grid;
@@ -8,6 +9,7 @@
     align-items: center;
 
     @include mobile  {
+        margin-top: rem(24);
         grid-template: repeat(4, 1fr) / repeat(2, 1fr);
         max-width: rem(571);
         gap: rem(10);

@@ -503,6 +503,12 @@ a[class] {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 3.75rem;
+}
+@media (width <= 47.99875rem) {
+  .footer {
+    margin-top: 1.5rem;
+  }
 }
 .footer__body {
   display: flex;
@@ -1060,6 +1066,7 @@ a[class] {
 }
 @media (width <= 47.99875rem) {
   .pictures {
+    margin-top: 1.5rem;
     grid-template: repeat(4, 1fr)/repeat(2, 1fr);
     max-width: 35.6875rem;
     gap: 0.625rem;
@@ -1072,4 +1079,17 @@ a[class] {
 .big-image {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+.map {
+  margin-top: 3.75rem;
+  width: 100%;
+  height: 26.25rem;
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+@media (width <= 47.99875rem) {
+  .map {
+    margin-top: 1.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
