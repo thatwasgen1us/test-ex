@@ -55,7 +55,7 @@
             transition-duration: var(--transition-duration);
             font-size: rem(20);
             line-height: 100%;
-            padding-block: rem(80);
+            padding-block: 8rem;
     
             &:not(.is-active) {
                 @include hide;

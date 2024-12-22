@@ -223,6 +223,7 @@ svg * {
 :root {
   --color-light: #FFFFFF;
   --color-light-blue: #F9F8FD;
+  --color-cards: #EAF2F5;
   --color-dark: #141414;
   --color-dark-blue: #22253B;
   --color-blue: #38BFF2;
@@ -458,7 +459,7 @@ a[class] {
     transition-duration: var(--transition-duration);
     font-size: 1.25rem;
     line-height: 100%;
-    padding-block: 5rem;
+    padding-block: 8rem;
   }
   .header__menu:not(.is-active) {
     opacity: 0;
@@ -841,4 +842,94 @@ a[class] {
 .swiper-button.swiper-button-next::after,
 .swiper-button.swiper-button-prev::after {
   content: "";
+}
+
+.cards {
+  margin-top: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cards__title {
+  max-width: 37.5rem;
+  text-align: center;
+}
+.cards__list {
+  flex: 1;
+  margin-top: 2.125rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6875rem;
+  align-items: center;
+  min-width: 78.125rem;
+  margin-inline: -1.5625rem;
+  justify-content: center;
+}
+@media (max-width: 1185px) {
+  .cards__list {
+    min-width: 21.875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .cards__list {
+    gap: 0.625rem;
+  }
+}
+.cards__item {
+  width: 16.875rem;
+  height: 15.875rem;
+  background-color: var(--color-cards);
+  border-radius: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.125rem 2.1875rem;
+  row-gap: 0.625rem;
+  text-align: center;
+}
+@media (width <= 30.06125rem) {
+  .cards__item {
+    width: 9.0625rem;
+    height: 10.9375rem;
+    padding-inline: 0.4375rem;
+  }
+  .cards__item:last-child {
+    flex: 1 1 auto;
+    flex-direction: row;
+    max-width: 18.75rem;
+    -moz-column-gap: 1.0625rem;
+         column-gap: 1.0625rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .cards__item--image {
+    max-width: 2.5rem;
+  }
+}
+.cards__item--title {
+  font-size: 1rem;
+}
+@media (width <= 47.99875rem) {
+  .cards__item--title {
+    font-size: 0.75rem;
+  }
+}
+.cards__item--text {
+  font-size: 0.875rem;
+}
+@media (width <= 47.99875rem) {
+  .cards__item--text {
+    font-size: 0.5625rem;
+  }
+}
+
+.mobile-flex {
+  max-width: 9.375rem;
+}
+@media (width > 30.06125rem) {
+  .mobile-flex {
+    display: contents;
+  }
 }/*# sourceMappingURL=main.css.map */
