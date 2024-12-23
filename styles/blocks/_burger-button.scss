@@ -1,7 +1,7 @@
 @use '../helpers/' as *;
 
 .burger-button {
-    @include square(rem(34));
+    @include square(rem(36));
 
     display: inline-flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
             &:first-child {
                 rotate: 45deg;
                 transform-origin: 0;
-                translate: 0.25em -0.17em;
+                translate: 0.27em -0.14em;
             }
 
             &:nth-child(2) {

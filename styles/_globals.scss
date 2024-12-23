@@ -1,12 +1,14 @@
 @use 'helpers' as *;
 
 html {
+    overflow-x: hidden;
+    
     &.is-lock {
         overflow: hidden;
     }
 
     &, body {
-        overflow-x: hidden;
+        //;
     }
 }
 

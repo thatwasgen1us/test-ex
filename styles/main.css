@@ -287,13 +287,12 @@ svg * {
   color: var(--color-accent);
 }
 
+html {
+  overflow-x: hidden;
+}
 html.is-lock {
   overflow: hidden;
 }
-html, html body {
-  overflow-x: hidden;
-}
-
 body {
   font-size: clamp(0.75rem, 0.6694214876rem + 0.3305785124vw, 1rem);
   max-width: 100vw;
@@ -363,8 +362,8 @@ a[class] {
 }
 
 .burger-button {
-  width: 2.125rem;
-  height: 2.125rem;
+  width: 2.25rem;
+  height: 2.25rem;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
@@ -391,7 +390,7 @@ a[class] {
 .burger-button.is-active .burger-button__line:first-child {
   rotate: 45deg;
   transform-origin: 0;
-  translate: 0.25em -0.17em;
+  translate: 0.27em -0.14em;
 }
 .burger-button.is-active .burger-button__line:nth-child(2) {
   rotate: -45deg;
