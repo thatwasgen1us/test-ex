@@ -1125,8 +1125,8 @@ a[class] {
   height: 2.75rem;
   border-radius: 50%;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.25rem;
+  right: 1.25rem;
   border: 0.0625rem solid var(--color-dark-blue);
 }
 @media (any-hover: hover) {
@@ -1170,8 +1170,8 @@ a[class] {
   max-width: 39.6875rem;
   width: 100%;
   background-color: var(--color-light);
-  height: 110%;
   padding: 5rem 3.375rem;
+  min-height: 100vh;
 }
 .form__title {
   margin-bottom: 2.875rem;
@@ -1207,4 +1207,7 @@ a[class] {
 }
 .form__politics {
   margin-bottom: 1.5625rem;
+}
+.form__button {
+  margin-block: 0;
 }/*# sourceMappingURL=main.css.map */
