@@ -68,7 +68,7 @@
     </header>
 
     <main class="main">
-      <section class="swiper learn container">
+      <section class="swiper learn container" data-js-swiper>
         <ul class="learn__list swiper-wrapper">
           <li class="learn__item swiper-slide">
             <div class="learn__item--info">
@@ -80,7 +80,7 @@
                 Закажите звонок, и наш специалист свяжется с вами в ближайшее
                 время
               </p>
-              <button class="orange-button">
+              <button class="orange-button" data-js-orange-button>
                 Заказать звонок
                 <svg
                   width="16"
@@ -111,7 +111,7 @@
                 Всё, что вы узнали, вы тут же начинаете применять на практике.
                 Вы сразу видите результаты своего труда.
               </p>
-              <button class="orange-button">
+              <button class="orange-button" data-js-orange-button>
                 Заказать звонок
                 <svg
                   width="16"
@@ -144,7 +144,7 @@
                 Теория и практика подаются маленькими порциями. Так вам будет
                 легче усваивать новые знания.
               </p>
-              <button class="orange-button">
+              <button class="orange-button" data-js-orange-button>
                 Заказать звонок
                 <svg
                   width="16"
@@ -559,5 +559,64 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal-call" data-js-modal>
+      <button class="close-button" data-js-close-modal>
+        <span></span>
+        <span></span>
+      </button>
+      <form class="form" data-js-form>
+        <h2 class="form__title">Заказать звонок</h2>
+        <div class="form__group">
+          <label for="name">Имя</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="ваше имя"
+          />
+        </div>
+
+        <div class="form__group">
+          <label for="phone">Телефон</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            placeholder="+7 ХХХ - ХХХ - ХХ -ХХ"
+          />
+        </div>
+
+        <div class="form__group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="mail@site.com"
+          />
+        </div>
+        <div class="form__group">
+          <label for="message">Сообщение</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            placeholder="Ваше сообщение ..."
+          ></textarea>
+        </div>
+        <p class="form__politics">
+          Нажимая кнопку “Отправить”, соглашаюсь с
+          <a href="/" class="orange-text">политикой конфидениальности</a>
+        </p>
+        <button class="form__button orange-button" type="submit">
+          Отправить
+        </button>
+      </form>
+    </div>
   </body>
 </html>

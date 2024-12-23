@@ -1,0 +1,104 @@
+@use '../helpers/' as *;
+
+.modal-call {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-duration: var(--transition-duration);
+
+    &.is-active {
+        width: 100%;
+    }
+}
+
+.close-button {
+    @include square(rem(44));
+    border-radius: 50%;
+    position: absolute;
+    top: rem(16);
+    right: rem(16);
+    border: rem(1) solid var(--color-dark-blue);
+
+    @include hover {
+        background-color: var(--color-accent);
+        border: var(--color-light);
+
+        & span {
+            background-color: var(--color-light)
+        }
+    }
+
+    & span {
+        @include abs-center;
+        display: inline-block;
+        width: 50%;
+        height: rem(2);
+        background-color: var(--color-dark-blue);
+
+        &:nth-child(1) {
+            rotate: 45deg;
+        }
+        
+        &:nth-child(2) {
+            rotate: -45deg;
+        }
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(635);
+    width: 100%;
+    background-color: var(--color-light);
+    height: 110%;
+    padding: rem(80) rem(54);
+
+    &__title {
+        margin-bottom: rem(46);
+        font-size: rem(32);
+        line-height: rem(30);
+        text-align: center;
+    }
+
+    &__group {
+        width: 100%;
+        & label {
+            display: block;
+            margin-bottom: rem(16);
+            font-weight: 500;
+            line-height: rem(19);
+        }
+
+        & input {
+            margin-bottom: rem(16);
+            width: 100%;
+            height: rem(75);
+            padding-inline: rem(29);
+            border-radius: rem(10);
+            border: 1px solid rgb(159, 159, 159);
+        }
+
+        & textarea {
+            width: 100%;
+            height: rem(120);
+            padding-inline: rem(29);
+            padding-block: rem(23);
+            border-radius: rem(10);
+            border: 1px solid rgb(159, 159, 159);
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__politics {
+        margin-bottom: rem(25);
+    }
+}

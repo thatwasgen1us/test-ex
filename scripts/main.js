@@ -1,5 +1,4 @@
 import Header from "./Header.js";
-// const swiper = require("./Swiper.js");
 
 new Header();
 
@@ -23,3 +22,22 @@ function init() {
   map.geoObjects.add(placemark);
 }
 ymaps.ready(init);
+
+let OrangeBtn = document.querySelectorAll("[data-js-orange-button]");
+let menu = document.querySelector("[data-js-modal]");
+let closeBtn = document.querySelector("[data-js-close-modal]");
+let form = document.querySelector("[data-js-form]");
+
+console.log(form);
+
+let onClickOrangeButton = () => {
+  menu.classList.toggle("is-active");
+  document.documentElement.classList.toggle("is-lock");
+};
+
+OrangeBtn.forEach(function (button) {
+  button.addEventListener("click", onClickOrangeButton);
+});
+
+closeBtn.addEventListener("click", onClickOrangeButton);
+

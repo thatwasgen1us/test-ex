@@ -283,12 +283,20 @@ svg * {
   color: var(--color-accent);
 }
 
+.orange-text {
+  color: var(--color-accent);
+}
+
 html.is-lock {
   overflow: hidden;
+}
+html, html body {
+  overflow-x: hidden;
 }
 
 body {
   font-size: clamp(0.75rem, 0.6694214876rem + 0.3305785124vw, 1rem);
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-base);
@@ -1092,4 +1100,111 @@ a[class] {
   .map {
     margin-top: 1.5rem;
   }
+}
+
+.modal-call {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-duration: var(--transition-duration);
+}
+.modal-call.is-active {
+  width: 100%;
+}
+
+.close-button {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0.0625rem solid var(--color-dark-blue);
+}
+@media (any-hover: hover) {
+  .close-button:hover {
+    background-color: var(--color-accent);
+    border: var(--color-light);
+  }
+  .close-button:hover span {
+    background-color: var(--color-light);
+  }
+}
+@media (any-hover: none) {
+  .close-button:active {
+    background-color: var(--color-accent);
+    border: var(--color-light);
+  }
+  .close-button:active span {
+    background-color: var(--color-light);
+  }
+}
+.close-button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: inline-block;
+  width: 50%;
+  height: 0.125rem;
+  background-color: var(--color-dark-blue);
+}
+.close-button span:nth-child(1) {
+  rotate: 45deg;
+}
+.close-button span:nth-child(2) {
+  rotate: -45deg;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 39.6875rem;
+  width: 100%;
+  background-color: var(--color-light);
+  height: 110%;
+  padding: 5rem 3.375rem;
+}
+.form__title {
+  margin-bottom: 2.875rem;
+  font-size: 2rem;
+  line-height: 1.875rem;
+  text-align: center;
+}
+.form__group {
+  width: 100%;
+}
+.form__group label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.1875rem;
+}
+.form__group input {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 4.6875rem;
+  padding-inline: 1.8125rem;
+  border-radius: 0.625rem;
+  border: 1px solid rgb(159, 159, 159);
+}
+.form__group textarea {
+  width: 100%;
+  height: 7.5rem;
+  padding-inline: 1.8125rem;
+  padding-block: 1.4375rem;
+  border-radius: 0.625rem;
+  border: 1px solid rgb(159, 159, 159);
+  margin-bottom: 1rem;
+}
+.form__politics {
+  margin-bottom: 1.5625rem;
 }/*# sourceMappingURL=main.css.map */
