@@ -28,8 +28,6 @@ let menu = document.querySelector("[data-js-modal]");
 let closeBtn = document.querySelector("[data-js-close-modal]");
 let form = document.querySelector("[data-js-form]");
 
-console.log(form);
-
 let onClickOrangeButton = () => {
   menu.classList.toggle("is-active");
   document.documentElement.classList.toggle("is-lock");
